@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "kindlingage:fiber_cord"
+    },
+    "F": {
+      "item": "kindlingage:flint_flake"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "FF",
+    "SC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kindlingage:flint_hatchet"
+  }
+}

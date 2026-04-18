@@ -1,0 +1,5 @@
+// 1.21.1	2026-04-11T17:30:22.657139023	Tags for minecraft:item mod id kindlingage
+a75f08423addd9ef44965da659b67a5c17d16913 data/minecraft/tags/item/enchantable/durability.json
+f97ad6d4f9a31c38c95512cf53d9536988a51e9e data/minecraft/tags/item/enchantable/mining.json
+f97ad6d4f9a31c38c95512cf53d9536988a51e9e data/minecraft/tags/item/enchantable/mining_loot.json
+1d631b745ffbc639613384e0874c1ab44888b6d3 data/minecraft/tags/item/enchantable/trident.json

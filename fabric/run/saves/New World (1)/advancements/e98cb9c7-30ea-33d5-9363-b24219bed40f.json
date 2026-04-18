@@ -1,0 +1,41 @@
+{
+  "minecraft:recipes/building_blocks/spruce_planks": {
+    "criteria": {
+      "has_logs": "2026-04-11 09:54:46 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2026-04-11 09:54:46 -0400"
+    },
+    "done": true
+  },
+  "kindlingage:recipes/misc/fiber_cord": {
+    "criteria": {
+      "has_plant_fiber": "2026-04-11 09:54:46 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-04-11 09:54:46 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_wood": {
+    "criteria": {
+      "has_log": "2026-04-11 09:54:46 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:frozen_river": "2026-04-11 09:55:00 -0400",
+      "minecraft:snowy_plains": "2026-04-11 09:54:47 -0400",
+      "minecraft:snowy_beach": "2026-04-11 09:55:37 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 3955
+}

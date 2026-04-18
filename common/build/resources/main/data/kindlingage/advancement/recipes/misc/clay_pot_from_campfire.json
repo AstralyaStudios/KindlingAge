@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kindlingage:clay_pot_from_campfire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wet_clay_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:wet_clay_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wet_clay_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kindlingage:clay_pot_from_campfire"
+    ]
+  }
+}

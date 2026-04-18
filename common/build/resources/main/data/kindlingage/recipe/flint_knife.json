@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "kindlingage:flint_flake"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " F",
+    "S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "kindlingage:flint_knife"
+  }
+}

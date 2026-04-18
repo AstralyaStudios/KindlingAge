@@ -1,0 +1,6 @@
+// 1.21.1	2026-04-12T16:05:34.131161736	Tags for minecraft:block mod id kindlingage
+aa3f45a2b63092c7414f468979a4e4080571be8b data/kindlingage/tags/block/flint_knife_fiber_sources.json
+a4e8097fff07f9a74259d6b5dd583f3437ff28a2 data/kindlingage/tags/block/flint_knife_stick_sources.json
+50d6a931af92259d11634388b0b4414803d1988a data/minecraft/tags/block/mineable/axe.json
+520985857f4a8ae8ef420255df42e80c0b4ab9c0 data/minecraft/tags/block/mineable/pickaxe.json
+d04acad5929d487a527af17861ef736ba4ebee78 data/minecraft/tags/block/mineable/shovel.json

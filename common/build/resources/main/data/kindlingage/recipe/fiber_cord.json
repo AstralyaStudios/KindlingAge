@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kindlingage:plant_fiber"
+    },
+    {
+      "item": "kindlingage:plant_fiber"
+    },
+    {
+      "item": "kindlingage:plant_fiber"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kindlingage:fiber_cord"
+  }
+}

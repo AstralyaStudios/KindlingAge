@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/kindlingage.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/kindlingage.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/kindlingage.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/kindlingage.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/kindlingage.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/kindlingage.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/kindlingage.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/kindlingage.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/kindlingage.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/kindlingage.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/kindlingage.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/kindlingage.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/kindlingage.neoforge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/kindlingage.neoforge.test.iml" />
+    </modules>
+  </component>
+</project>

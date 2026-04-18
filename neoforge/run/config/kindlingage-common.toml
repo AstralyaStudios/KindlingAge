@@ -1,0 +1,19 @@
+[tools]
+	#Multiplier applied to Hunting Spear projectile damage when hitting entities in kindlingage:small_game. Set to 1.0 to disable.
+	# Default: 1.5
+	# Range: 1.0 ~ 10.0
+	huntingSpearSmallGameDamageMultiplier = 1.5
+	#Flat bonus added to Hunting Spear projectile damage when hitting entities in kindlingage:small_game. Set to 0.0 to disable.
+	# Default: 0.0
+	# Range: 0.0 ~ 100.0
+	huntingSpearSmallGameDamageBonus = 0.0
+
+[blocks]
+	#Capacity of the Clay Pot in millibuckets (mB). Default 2000 (2 buckets).
+	# Default: 2000
+	# Range: 250 ~ 16000
+	clayPotCapacityMb = 2000
+	#Time in ticks required to sun-dry a Wet Clay Pot. Fire or campfire halves this duration.
+	# Default: 2400
+	# Range: 200 ~ 72000
+	wetClayPotDuration = 2400
