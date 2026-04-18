@@ -1,6 +1,0 @@
-/give Dev
-/give Dev kindlingage:flint_flake
-/time set day
-/kill Dev
-/locate biome minecraft:swamp
-/tp @s -2990 64 2241
