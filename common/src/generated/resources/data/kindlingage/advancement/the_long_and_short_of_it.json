@@ -1,0 +1,33 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_fiber_cord": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:fiber_cord"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kindlingage.the_long_and_short_of_it.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:fiber_cord"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.the_long_and_short_of_it.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_fiber_cord"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

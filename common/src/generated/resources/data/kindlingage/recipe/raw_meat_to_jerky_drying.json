@@ -1,0 +1,11 @@
+{
+  "type": "kindlingage:drying",
+  "ingredient": {
+    "tag": "c:foods/raw_meat"
+  },
+  "result": {
+    "count": 1,
+    "id": "kindlingage:jerky"
+  },
+  "duration": 4800
+}

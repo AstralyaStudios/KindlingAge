@@ -32,5 +32,7 @@ public final class KindlingAgeNeoForgeDataGenerator {
         generator.addProvider(true, new ModItemTagProvider(output, registries, blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(true, new ModEntityTypeTagProvider(output, registries));
         generator.addProvider(true, new ModBlockStateProvider(output, existingFileHelper));
+        generator.addProvider(true, new ModBlockLootTableProvider(output, registries));
+        generator.addProvider(true, new ModAdvancementProvider(output, registries, existingFileHelper));
     }
 }

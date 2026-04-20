@@ -4,6 +4,7 @@ import net.astralya.kindlingage.KindlingAge;
 import net.astralya.kindlingage.KindlingAgeCommonConfig;
 import net.astralya.kindlingage.KindlingAgeConfig;
 import net.astralya.kindlingage.block.entity.custom.ClayPotBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.FishTrapBlockEntity;
 import net.astralya.kindlingage.item.custom.HuntingSpearItem;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -42,7 +43,9 @@ final class KindlingAgeFabricConfig {
                 getDouble(properties, HuntingSpearItem.CONFIG_CATEGORY + "." + HuntingSpearItem.CONFIG_SMALL_GAME_DAMAGE_MULTIPLIER_KEY, defaults.huntingSpearSmallGameDamageMultiplier()),
                 getDouble(properties, HuntingSpearItem.CONFIG_CATEGORY + "." + HuntingSpearItem.CONFIG_SMALL_GAME_DAMAGE_BONUS_KEY, defaults.huntingSpearSmallGameDamageBonus()),
                 getInt(properties, ClayPotBlockEntity.CONFIG_CATEGORY + "." + ClayPotBlockEntity.CONFIG_CAPACITY_MB_KEY, defaults.clayPotCapacityMb()),
-                getInt(properties, ClayPotBlockEntity.CONFIG_CATEGORY + "." + ClayPotBlockEntity.CONFIG_WET_DURATION_KEY, defaults.wetClayPotDuration())
+                getInt(properties, ClayPotBlockEntity.CONFIG_CATEGORY + "." + ClayPotBlockEntity.CONFIG_WET_DURATION_KEY, defaults.wetClayPotDuration()),
+                getInt(properties, FishTrapBlockEntity.CONFIG_CATEGORY + "." + FishTrapBlockEntity.CONFIG_CATCH_INTERVAL_KEY, defaults.fishTrapCatchInterval()),
+                getBoolean(properties, KindlingAgeConfig.PROGRESSION_CONFIG_CATEGORY + "." + KindlingAgeConfig.PREVENT_HAND_BREAKING_LOGS_KEY, defaults.preventHandBreakingLogs())
         );
     }
 
@@ -52,6 +55,8 @@ final class KindlingAgeFabricConfig {
         properties.setProperty(HuntingSpearItem.CONFIG_CATEGORY + "." + HuntingSpearItem.CONFIG_SMALL_GAME_DAMAGE_BONUS_KEY, Double.toString(values.huntingSpearSmallGameDamageBonus()));
         properties.setProperty(ClayPotBlockEntity.CONFIG_CATEGORY + "." + ClayPotBlockEntity.CONFIG_CAPACITY_MB_KEY, Integer.toString(values.clayPotCapacityMb()));
         properties.setProperty(ClayPotBlockEntity.CONFIG_CATEGORY + "." + ClayPotBlockEntity.CONFIG_WET_DURATION_KEY, Integer.toString(values.wetClayPotDuration()));
+        properties.setProperty(FishTrapBlockEntity.CONFIG_CATEGORY + "." + FishTrapBlockEntity.CONFIG_CATCH_INTERVAL_KEY, Integer.toString(values.fishTrapCatchInterval()));
+        properties.setProperty(KindlingAgeConfig.PROGRESSION_CONFIG_CATEGORY + "." + KindlingAgeConfig.PREVENT_HAND_BREAKING_LOGS_KEY, Boolean.toString(values.preventHandBreakingLogs()));
 
         try {
             Files.createDirectories(configPath.getParent());
@@ -89,5 +94,19 @@ final class KindlingAgeFabricConfig {
             KindlingAge.LOGGER.warn("Invalid integer config value for {}: {}", key, raw);
             return fallback;
         }
+    }
+
+    private static boolean getBoolean(Properties properties, String key, boolean fallback) {
+        String raw = properties.getProperty(key);
+        if (raw == null) {
+            return fallback;
+        }
+
+        if ("true".equalsIgnoreCase(raw) || "false".equalsIgnoreCase(raw)) {
+            return Boolean.parseBoolean(raw);
+        }
+
+        KindlingAge.LOGGER.warn("Invalid boolean config value for {}: {}", key, raw);
+        return fallback;
     }
 }

@@ -1,9 +1,15 @@
 package net.astralya.kindlingage;
 
 import net.astralya.kindlingage.block.entity.custom.ClayPotBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.FishTrapBlockEntity;
 import net.astralya.kindlingage.item.custom.HuntingSpearItem;
 
 public final class KindlingAgeConfig {
+  public static final String PROGRESSION_CONFIG_CATEGORY = "progression";
+  public static final String PREVENT_HAND_BREAKING_LOGS_KEY = "preventHandBreakingLogs";
+
+  private static boolean preventHandBreakingLogs = true;
+
   private KindlingAgeConfig() {}
 
   public static void apply(KindlingAgeCommonConfig.Values values) {
@@ -12,6 +18,8 @@ public final class KindlingAgeConfig {
         sanitized.huntingSpearSmallGameDamageMultiplier(),
         sanitized.huntingSpearSmallGameDamageBonus());
     ClayPotBlockEntity.applyConfig(sanitized.clayPotCapacityMb(), sanitized.wetClayPotDuration());
+    FishTrapBlockEntity.applyConfig(sanitized.fishTrapCatchInterval());
+    preventHandBreakingLogs = sanitized.preventHandBreakingLogs();
   }
 
   public static void reset() {
@@ -23,7 +31,9 @@ public final class KindlingAgeConfig {
         HuntingSpearItem.getSmallGameDamageMultiplier(),
         HuntingSpearItem.getSmallGameDamageBonus(),
         ClayPotBlockEntity.getCapacityMb(),
-        ClayPotBlockEntity.getWetClayPotDuration());
+        ClayPotBlockEntity.getWetClayPotDuration(),
+        FishTrapBlockEntity.getCatchInterval(),
+        preventHandBreakingLogs);
   }
 
   public static double huntingSpearSmallGameDamageMultiplier() {
@@ -40,5 +50,13 @@ public final class KindlingAgeConfig {
 
   public static int wetClayPotDuration() {
     return ClayPotBlockEntity.getWetClayPotDuration();
+  }
+
+  public static int fishTrapCatchInterval() {
+    return FishTrapBlockEntity.getCatchInterval();
+  }
+
+  public static boolean preventHandBreakingLogs() {
+    return preventHandBreakingLogs;
   }
 }

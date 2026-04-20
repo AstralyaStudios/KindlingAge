@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:foods/raw_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kindlingage:raw_meat_to_jerky_drying"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ],
+    [
+      "has_raw_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kindlingage:raw_meat_to_jerky_drying"
+    ]
+  }
+}

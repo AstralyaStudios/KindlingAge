@@ -149,11 +149,6 @@ public final class WickerBasketBlock extends BaseEntityBlock {
   @Override
   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
       Level level, BlockState state, BlockEntityType<T> type) {
-    if (level.isClientSide) {
-      return createTickerHelper(
-          type, ModBlockEntityTypes.WICKER_BASKET.get(), WickerBasketBlockEntity::clientTick);
-    }
-
     return createTickerHelper(
         type, ModBlockEntityTypes.WICKER_BASKET.get(), WickerBasketBlockEntity::serverTick);
   }

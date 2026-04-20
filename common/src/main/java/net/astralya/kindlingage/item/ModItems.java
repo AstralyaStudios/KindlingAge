@@ -22,12 +22,37 @@ public final class ModItems {
   public static final RegistrySupplier<Item> FIBER_CORD =
       ITEMS.register("fiber_cord", () -> new Item(defaultProperties()));
 
+  public static final RegistrySupplier<Item> WILD_SEEDS =
+      ITEMS.register(
+          "wild_seeds", () -> new Item(defaultProperties().food(ModFoodProperties.WILD_SEEDS)));
+
+  public static final RegistrySupplier<Item> ROASTED_SEEDS =
+      ITEMS.register(
+          "roasted_seeds",
+          () -> new Item(defaultProperties().food(ModFoodProperties.ROASTED_SEEDS)));
+
+  public static final RegistrySupplier<Item> DRIED_FISH =
+      ITEMS.register(
+          "dried_fish", () -> new Item(defaultProperties().food(ModFoodProperties.DRIED_FISH)));
+
+  public static final RegistrySupplier<Item> JERKY =
+      ITEMS.register("jerky", () -> new Item(defaultProperties().food(ModFoodProperties.JERKY)));
+
+  public static final RegistrySupplier<Item> KINDLING =
+      ITEMS.register("kindling", () -> new Item(defaultProperties()));
+
   public static final RegistrySupplier<Item> FLINT_KNIFE =
       ITEMS.register(
           "flint_knife",
           () ->
               new FlintKnifeItem(
-                  ModToolTiers.FLINT, ModItems.PLANT_FIBER, 1, defaultProperties().durability(32)));
+                  ModToolTiers.FLINT,
+                  ModItems.PLANT_FIBER,
+                  1,
+                  ModItems.WILD_SEEDS,
+                  1,
+                  0.5f,
+                  defaultProperties().durability(32)));
 
   public static final RegistrySupplier<Item> FLINT_HATCHET =
       ITEMS.register(
@@ -66,6 +91,18 @@ public final class ModItems {
   public static final RegistrySupplier<Item> WICKER_BASKET =
       ITEMS.register(
           "wicker_basket", () -> new BlockItem(ModBlocks.WICKER_BASKET.get(), defaultProperties()));
+
+  public static final RegistrySupplier<Item> HEARTH_PIT =
+      ITEMS.register(
+          "hearth_pit", () -> new BlockItem(ModBlocks.HEARTH_PIT.get(), defaultProperties()));
+
+  public static final RegistrySupplier<Item> FISH_TRAP =
+      ITEMS.register(
+          "fish_trap", () -> new BlockItem(ModBlocks.FISH_TRAP.get(), defaultProperties()));
+
+  public static final RegistrySupplier<Item> DRYING_RACK =
+      ITEMS.register(
+          "drying_rack", () -> new BlockItem(ModBlocks.DRYING_RACK.get(), defaultProperties()));
 
   private ModItems() {}
 

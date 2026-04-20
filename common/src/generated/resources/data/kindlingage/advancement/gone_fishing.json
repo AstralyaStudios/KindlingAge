@@ -1,0 +1,33 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_fish_trap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:fish_trap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kindlingage.gone_fishing.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:fish_trap"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.gone_fishing.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_fish_trap"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

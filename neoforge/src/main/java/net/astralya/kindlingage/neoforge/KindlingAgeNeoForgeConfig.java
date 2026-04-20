@@ -3,6 +3,7 @@ package net.astralya.kindlingage.neoforge;
 import net.astralya.kindlingage.KindlingAgeCommonConfig;
 import net.astralya.kindlingage.KindlingAgeConfig;
 import net.astralya.kindlingage.block.entity.custom.ClayPotBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.FishTrapBlockEntity;
 import net.astralya.kindlingage.item.custom.HuntingSpearItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -17,6 +18,8 @@ final class KindlingAgeNeoForgeConfig {
     private static final ModConfigSpec.DoubleValue HUNTING_SPEAR_SMALL_GAME_DAMAGE_BONUS;
     private static final ModConfigSpec.IntValue CLAY_POT_CAPACITY_MB;
     private static final ModConfigSpec.IntValue WET_CLAY_POT_DURATION;
+    private static final ModConfigSpec.IntValue FISH_TRAP_CATCH_INTERVAL;
+    private static final ModConfigSpec.BooleanValue PREVENT_HAND_BREAKING_LOGS;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -62,6 +65,25 @@ final class KindlingAgeNeoForgeConfig {
                         ClayPotBlockEntity.MAX_WET_DURATION
                 );
 
+        FISH_TRAP_CATCH_INTERVAL = builder
+                .comment("Time in ticks between fish trap catches while baited and underwater.")
+                .defineInRange(
+                        FishTrapBlockEntity.CONFIG_CATCH_INTERVAL_KEY,
+                        FishTrapBlockEntity.DEFAULT_CATCH_INTERVAL,
+                        FishTrapBlockEntity.MIN_CATCH_INTERVAL,
+                        FishTrapBlockEntity.MAX_CATCH_INTERVAL
+                );
+
+        builder.pop();
+        builder.push(KindlingAgeConfig.PROGRESSION_CONFIG_CATEGORY);
+
+        PREVENT_HAND_BREAKING_LOGS = builder
+                .comment("If true, players cannot break log blocks with an empty main hand.")
+                .define(
+                        KindlingAgeConfig.PREVENT_HAND_BREAKING_LOGS_KEY,
+                        true
+                );
+
         builder.pop();
         SPEC = builder.build();
     }
@@ -92,7 +114,9 @@ final class KindlingAgeNeoForgeConfig {
                 HUNTING_SPEAR_SMALL_GAME_DAMAGE_MULTIPLIER.get(),
                 HUNTING_SPEAR_SMALL_GAME_DAMAGE_BONUS.get(),
                 CLAY_POT_CAPACITY_MB.get(),
-                WET_CLAY_POT_DURATION.get()
+                WET_CLAY_POT_DURATION.get(),
+                FISH_TRAP_CATCH_INTERVAL.get(),
+                PREVENT_HAND_BREAKING_LOGS.get()
         ));
     }
 }

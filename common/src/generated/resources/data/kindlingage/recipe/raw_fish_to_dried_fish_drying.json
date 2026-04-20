@@ -1,0 +1,11 @@
+{
+  "type": "kindlingage:drying",
+  "duration": 4800,
+  "ingredient": {
+    "tag": "c:foods/raw_fish"
+  },
+  "result": {
+    "count": 1,
+    "id": "kindlingage:dried_fish"
+  }
+}

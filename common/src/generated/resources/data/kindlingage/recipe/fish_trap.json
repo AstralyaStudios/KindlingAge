@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "minecraft:sugar_cane"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SCS",
+    "C C",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kindlingage:fish_trap"
+  }
+}

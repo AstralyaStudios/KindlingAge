@@ -21,12 +21,24 @@ public final class FlintKnifeItem extends Item {
 
   private final Supplier<Item> fiberItem;
   private final int fiberCount;
+  private final Supplier<Item> wildSeedItem;
+  private final int wildSeedCount;
+  private final float wildSeedChance;
 
   public FlintKnifeItem(
-      Tier tier, Supplier<Item> fiberItem, int fiberCount, Properties properties) {
+      Tier tier,
+      Supplier<Item> fiberItem,
+      int fiberCount,
+      Supplier<Item> wildSeedItem,
+      int wildSeedCount,
+      float wildSeedChance,
+      Properties properties) {
     super(properties.attributes(SwordItem.createAttributes(tier, 1, ATTACK_SPEED_MODIFIER)));
     this.fiberItem = fiberItem;
     this.fiberCount = fiberCount;
+    this.wildSeedItem = wildSeedItem;
+    this.wildSeedCount = wildSeedCount;
+    this.wildSeedChance = wildSeedChance;
   }
 
   @Override
@@ -37,25 +49,21 @@ public final class FlintKnifeItem extends Item {
     }
 
     if (state.is(ModTags.Blocks.FLINT_KNIFE_FIBER_SOURCES)) {
-      level.addFreshEntity(
-          new ItemEntity(
-              level,
-              pos.getX() + 0.5D,
-              pos.getY() + 0.5D,
-              pos.getZ() + 0.5D,
-              new ItemStack(fiberItem.get(), fiberCount)));
+      spawnDrop(level, pos, new ItemStack(fiberItem.get(), fiberCount));
+      damageHeldStack(stack, player);
+      return true;
+    }
+
+    if (state.is(ModTags.Blocks.FLINT_KNIFE_WILD_SEED_SOURCES)) {
+      if (level.random.nextFloat() < wildSeedChance) {
+        spawnDrop(level, pos, new ItemStack(wildSeedItem.get(), wildSeedCount));
+      }
       damageHeldStack(stack, player);
       return true;
     }
 
     if (state.is(ModTags.Blocks.FLINT_KNIFE_STICK_SOURCES)) {
-      level.addFreshEntity(
-          new ItemEntity(
-              level,
-              pos.getX() + 0.5D,
-              pos.getY() + 0.5D,
-              pos.getZ() + 0.5D,
-              new ItemStack(Items.STICK)));
+      spawnDrop(level, pos, new ItemStack(Items.STICK));
       damageHeldStack(stack, player);
       return true;
     }
@@ -79,6 +87,11 @@ public final class FlintKnifeItem extends Item {
         entity.getOffhandItem() == stack ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
     EquipmentSlot slot = LivingEntity.getSlotForHand(hand);
     stack.hurtAndBreak(1, entity, slot);
+  }
+
+  private static void spawnDrop(Level level, BlockPos pos, ItemStack stack) {
+    level.addFreshEntity(
+        new ItemEntity(level, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, stack));
   }
 
   @Override

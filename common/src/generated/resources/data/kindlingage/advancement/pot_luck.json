@@ -1,0 +1,46 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_clay_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:clay_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wet_clay_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:wet_clay_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kindlingage.pot_luck.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:clay_pot"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.pot_luck.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_wet_clay_pot"
+    ],
+    [
+      "has_clay_pot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_drying_rack": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:drying_rack"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kindlingage.off_the_rack.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:drying_rack"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.off_the_rack.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_drying_rack"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

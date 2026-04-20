@@ -5,6 +5,7 @@ import net.astralya.kindlingage.block.entity.ModBlockEntityTypes;
 import net.astralya.kindlingage.entity.ModEntityTypes;
 import net.astralya.kindlingage.item.ModCreativeModeTabs;
 import net.astralya.kindlingage.item.ModItems;
+import net.astralya.kindlingage.recipe.ModRecipeTypes;
 import net.astralya.kindlingage.screen.ModMenuTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ public final class KindlingAge {
     ModItems.init();
     ModEntityTypes.init();
     ModBlockEntityTypes.init();
+    ModRecipeTypes.init();
     ModMenuTypes.init();
     ModCreativeModeTabs.init();
   }

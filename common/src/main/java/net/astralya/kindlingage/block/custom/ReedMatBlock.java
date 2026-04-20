@@ -30,7 +30,7 @@ public final class ReedMatBlock extends Block {
   public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
   public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
 
-  private static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
+  private static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D);
 
   public ReedMatBlock(Properties properties) {
     super(properties);

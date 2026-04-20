@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "kindlingage:reed_mat",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "foot"
+              }
+            }
+          ],
+          "name": "kindlingage:reed_mat"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "kindlingage:blocks/reed_mat"
+}

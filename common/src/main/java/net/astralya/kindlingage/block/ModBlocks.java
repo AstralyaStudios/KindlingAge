@@ -4,11 +4,15 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.astralya.kindlingage.KindlingAge;
 import net.astralya.kindlingage.block.custom.ClayPotBlock;
+import net.astralya.kindlingage.block.custom.DryingRackBlock;
+import net.astralya.kindlingage.block.custom.FishTrapBlock;
+import net.astralya.kindlingage.block.custom.HearthPitBlock;
 import net.astralya.kindlingage.block.custom.ReedMatBlock;
 import net.astralya.kindlingage.block.custom.WetClayPotBlock;
 import net.astralya.kindlingage.block.custom.WickerBasketBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -57,6 +61,40 @@ public final class ModBlocks {
                       .mapColor(MapColor.WOOD)
                       .strength(0.6F)
                       .sound(SoundType.GRASS)
+                      .noOcclusion()));
+
+  public static final RegistrySupplier<Block> HEARTH_PIT =
+      BLOCKS.register(
+          "hearth_pit",
+          () ->
+              new HearthPitBlock(
+                  BlockBehaviour.Properties.of()
+                      .mapColor(MapColor.STONE)
+                      .strength(1.5F)
+                      .sound(SoundType.STONE)
+                      .noOcclusion()
+                      .lightLevel(state -> state.getValue(CampfireBlock.LIT) ? 13 : 0)));
+
+  public static final RegistrySupplier<Block> FISH_TRAP =
+      BLOCKS.register(
+          "fish_trap",
+          () ->
+              new FishTrapBlock(
+                  BlockBehaviour.Properties.of()
+                      .mapColor(MapColor.WOOD)
+                      .strength(0.8F)
+                      .sound(SoundType.GRASS)
+                      .noOcclusion()));
+
+  public static final RegistrySupplier<Block> DRYING_RACK =
+      BLOCKS.register(
+          "drying_rack",
+          () ->
+              new DryingRackBlock(
+                  BlockBehaviour.Properties.of()
+                      .mapColor(MapColor.WOOD)
+                      .strength(0.8F)
+                      .sound(SoundType.WOOD)
                       .noOcclusion()));
 
   private ModBlocks() {}

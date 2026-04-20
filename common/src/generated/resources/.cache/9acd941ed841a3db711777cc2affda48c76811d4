@@ -1,11 +1,16 @@
-// 1.21.1	2026-04-18T14:46:48.856479576	Item Models: kindlingage
+// 1.21.1	2026-04-20T18:24:14.909363889	Item Models: kindlingage
 cc438fb14ee08dcb9234acce1dce05d42091727e assets/kindlingage/models/item/crude_bag.json
+b80052d53c8e4f18fcf240b2091d1130cfcf922e assets/kindlingage/models/item/dried_fish.json
 f54124bb71da6ad80e24b056891be65cc76095d9 assets/kindlingage/models/item/fiber_cord.json
 c2fbdcbb44ca81fc025e6534157bc83f76980ad8 assets/kindlingage/models/item/flint_flake.json
 4344546656df0aed5f50ea4bb6147b8bbaa51671 assets/kindlingage/models/item/flint_hatchet.json
 697a78229888043bf5672577e84499d019605e2d assets/kindlingage/models/item/flint_knife.json
 14a781c675dae892adb5096940c1b5c5dd1ad5bf assets/kindlingage/models/item/hunting_spear.json
+2a323ab18065d303cc5455ce1a4b0191ae9b46c5 assets/kindlingage/models/item/jerky.json
+217aa60f5b6702f89e335101c900766d98218d0c assets/kindlingage/models/item/kindling.json
 9687792575958cc79af427ee1cf51328e486653d assets/kindlingage/models/item/plant_fiber.json
 1d56528bd23fbae665ce487c27dfb2367cf3bfc1 assets/kindlingage/models/item/reed_mat.json
 6423fca7c262991ebec7e890b96dc6553400885e assets/kindlingage/models/item/reed_scoop.json
+f2cd85bf934950f691c5d8fc73d113a4f0b7b22f assets/kindlingage/models/item/roasted_seeds.json
 93b7b95618ec676fdb151dc1a8080c9e1efe17ed assets/kindlingage/models/item/water_reed_scoop.json
+9de0137aacdf5b7fa77f05d46bd95a4da12fd6e7 assets/kindlingage/models/item/wild_seeds.json

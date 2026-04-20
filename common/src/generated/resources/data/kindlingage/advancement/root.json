@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "has_flint": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:flint"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancements.kindlingage.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:flint_flake"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_flint"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

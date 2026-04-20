@@ -22,14 +22,17 @@ public final class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.FLINT_KNIFE_FIBER_SOURCES)
                 .add(Blocks.SHORT_GRASS, Blocks.TALL_GRASS, Blocks.FERN, Blocks.LARGE_FERN);
 
+        tag(ModTags.Blocks.FLINT_KNIFE_WILD_SEED_SOURCES)
+                .addTag(BlockTags.SMALL_FLOWERS);
+
         tag(ModTags.Blocks.FLINT_KNIFE_STICK_SOURCES)
                 .addTag(BlockTags.LEAVES);
 
         tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.WICKER_BASKET.get());
+                .add(ModBlocks.WICKER_BASKET.get(), ModBlocks.FISH_TRAP.get(), ModBlocks.DRYING_RACK.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.CLAY_POT.get());
+                .add(ModBlocks.CLAY_POT.get(), ModBlocks.HEARTH_PIT.get());
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.WET_CLAY_POT.get());

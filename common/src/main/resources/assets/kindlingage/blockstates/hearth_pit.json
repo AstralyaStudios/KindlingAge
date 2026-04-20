@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "kindlingage:block/hearth_pit_empty"
+    },
+    "lit=true": {
+      "model": "kindlingage:block/hearth_pit_lit"
+    }
+  }
+}

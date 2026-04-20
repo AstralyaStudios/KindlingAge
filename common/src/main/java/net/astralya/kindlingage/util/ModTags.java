@@ -14,6 +14,8 @@ public final class ModTags {
   public static final class Blocks {
     public static final TagKey<Block> FLINT_KNIFE_FIBER_SOURCES =
         create("flint_knife_fiber_sources");
+    public static final TagKey<Block> FLINT_KNIFE_WILD_SEED_SOURCES =
+        create("flint_knife_wild_seed_sources");
     public static final TagKey<Block> FLINT_KNIFE_STICK_SOURCES =
         create("flint_knife_stick_sources");
 

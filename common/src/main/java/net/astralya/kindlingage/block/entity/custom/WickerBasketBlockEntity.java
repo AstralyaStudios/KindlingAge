@@ -9,7 +9,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.MenuProvider;
@@ -28,10 +27,6 @@ public final class WickerBasketBlockEntity extends BlockEntity implements Contai
   public static final int SIZE = COLUMNS * ROWS;
 
   private final NonNullList<ItemStack> items = NonNullList.withSize(SIZE, ItemStack.EMPTY);
-
-  private float openProgress;
-  private float openProgressOld;
-  private int openCount;
 
   private final ContainerOpenersCounter openersCounter =
       new ContainerOpenersCounter() {
@@ -59,9 +54,7 @@ public final class WickerBasketBlockEntity extends BlockEntity implements Contai
 
         @Override
         protected void openerCountChanged(
-            Level level, BlockPos pos, BlockState state, int oldCount, int newCount) {
-          level.blockEvent(pos, state.getBlock(), 1, newCount);
-        }
+            Level level, BlockPos pos, BlockState state, int oldCount, int newCount) {}
 
         @Override
         protected boolean isOwnContainer(Player player) {
@@ -74,24 +67,9 @@ public final class WickerBasketBlockEntity extends BlockEntity implements Contai
     super(ModBlockEntityTypes.WICKER_BASKET.get(), pos, state);
   }
 
-  public float getOpenProgress(float partialTick) {
-    return Mth.lerp(partialTick, this.openProgressOld, this.openProgress);
-  }
-
   public static void serverTick(
       Level level, BlockPos pos, BlockState state, WickerBasketBlockEntity blockEntity) {
     blockEntity.openersCounter.recheckOpeners(level, pos, state);
-  }
-
-  public static void clientTick(
-      Level level, BlockPos pos, BlockState state, WickerBasketBlockEntity blockEntity) {
-    blockEntity.openProgressOld = blockEntity.openProgress;
-
-    float target = blockEntity.openCount > 0 ? 1.0F : 0.0F;
-    float speed = 0.2F;
-
-    blockEntity.openProgress += (target - blockEntity.openProgress) * speed;
-    blockEntity.openProgress = Mth.clamp(blockEntity.openProgress, 0.0F, 1.0F);
   }
 
   @Override
@@ -112,16 +90,6 @@ public final class WickerBasketBlockEntity extends BlockEntity implements Contai
 
     this.openersCounter.decrementOpeners(
         player, this.level, this.worldPosition, this.getBlockState());
-  }
-
-  @Override
-  public boolean triggerEvent(int id, int param) {
-    if (id == 1) {
-      this.openCount = param;
-      return true;
-    }
-
-    return super.triggerEvent(id, param);
   }
 
   @Override

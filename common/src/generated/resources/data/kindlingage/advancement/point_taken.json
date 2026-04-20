@@ -1,0 +1,33 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_hunting_spear": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kindlingage:hunting_spear"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kindlingage.point_taken.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kindlingage:hunting_spear"
+    },
+    "title": {
+      "translate": "advancements.kindlingage.point_taken.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_hunting_spear"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

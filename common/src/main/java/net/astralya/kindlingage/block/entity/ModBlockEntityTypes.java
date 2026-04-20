@@ -5,6 +5,9 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.astralya.kindlingage.KindlingAge;
 import net.astralya.kindlingage.block.ModBlocks;
 import net.astralya.kindlingage.block.entity.custom.ClayPotBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.DryingRackBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.FishTrapBlockEntity;
+import net.astralya.kindlingage.block.entity.custom.HearthPitBlockEntity;
 import net.astralya.kindlingage.block.entity.custom.WickerBasketBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -29,6 +32,27 @@ public final class ModBlockEntityTypes {
           () ->
               BlockEntityType.Builder.of(
                       WickerBasketBlockEntity::new, ModBlocks.WICKER_BASKET.get())
+                  .build(null));
+
+  public static final RegistrySupplier<BlockEntityType<HearthPitBlockEntity>> HEARTH_PIT =
+      BLOCK_ENTITY_TYPES.register(
+          "hearth_pit",
+          () ->
+              BlockEntityType.Builder.of(HearthPitBlockEntity::new, ModBlocks.HEARTH_PIT.get())
+                  .build(null));
+
+  public static final RegistrySupplier<BlockEntityType<FishTrapBlockEntity>> FISH_TRAP =
+      BLOCK_ENTITY_TYPES.register(
+          "fish_trap",
+          () ->
+              BlockEntityType.Builder.of(FishTrapBlockEntity::new, ModBlocks.FISH_TRAP.get())
+                  .build(null));
+
+  public static final RegistrySupplier<BlockEntityType<DryingRackBlockEntity>> DRYING_RACK =
+      BLOCK_ENTITY_TYPES.register(
+          "drying_rack",
+          () ->
+              BlockEntityType.Builder.of(DryingRackBlockEntity::new, ModBlocks.DRYING_RACK.get())
                   .build(null));
 
   private ModBlockEntityTypes() {}

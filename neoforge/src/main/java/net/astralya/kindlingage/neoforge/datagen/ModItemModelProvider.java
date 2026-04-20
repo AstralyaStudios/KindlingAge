@@ -16,6 +16,11 @@ public final class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FLINT_FLAKE.get());
         basicItem(ModItems.PLANT_FIBER.get());
         basicItem(ModItems.FIBER_CORD.get());
+        basicItem(ModItems.WILD_SEEDS.get());
+        basicItem(ModItems.ROASTED_SEEDS.get());
+        basicItem(ModItems.DRIED_FISH.get());
+        basicItem(ModItems.JERKY.get());
+        basicItem(ModItems.KINDLING.get());
         basicItem(ModItems.FLINT_KNIFE.get());
         basicItem(ModItems.FLINT_HATCHET.get());
         handheldItem(ModItems.HUNTING_SPEAR.get());
