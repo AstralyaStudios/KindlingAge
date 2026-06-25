@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "kindlingage:fiber_cord"
+    }
+  },
+  "pattern": [
+    "C C",
+    "CCC"
+  ],
+  "result": {
+    "item": "kindlingage:wicker_basket"
+  },
+  "show_notification": true
+}

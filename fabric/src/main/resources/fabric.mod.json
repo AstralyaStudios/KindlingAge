@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.astralya.kindlingage.fabric.KindlingAgeFabric"
+    ],
+    "client": [
+      "net.astralya.kindlingage.fabric.KindlingAgeFabricClient"
+    ]
+  },
+  "mixins": [
+    "kindlingage.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=17",
+    "architectury": ">=${architectury_api_version}",
+    "fabric-api": ">=${fabric_api_version}"
+  }
+}

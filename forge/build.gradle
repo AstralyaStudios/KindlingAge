@@ -1,0 +1,95 @@
+plugins {
+    id "com.github.johnrengelman.shadow"
+}
+
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
+configurations {
+    common {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+
+    shadowBundle {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+}
+
+def commonGeneratedResources = project(":common").file("src/generated/resources").absolutePath
+def commonResources = project(":common").file("src/main/resources").absolutePath
+def modId = rootProject.property("mod_id")
+
+dependencies {
+    forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
+    modApi "dev.architectury:architectury-forge:${rootProject.architectury_api_version}"
+
+    common(project(path: ":common", configuration: "namedElements")) {
+        transitive = false
+    }
+    developmentForge(project(path: ":common", configuration: "namedElements")) {
+        transitive = false
+    }
+    shadowBundle(project(path: ":common", configuration: "transformProductionForge")) {
+        transitive = false
+    }
+}
+
+loom {
+    forge {
+    }
+
+    runs {
+        data {
+            data()
+            name = "Forge Data Generation"
+            runDir = "build/datagen"
+            programArgs "--mod", modId
+            programArgs "--all"
+            programArgs "--output", commonGeneratedResources
+            programArgs "--existing", commonResources
+        }
+    }
+}
+
+processResources {
+    inputs.property "version", rootProject.mod_version
+    inputs.property "minecraft_version", rootProject.minecraft_version
+    inputs.property "forge_version", rootProject.forge_version
+    inputs.property "architectury_api_version", rootProject.architectury_api_version
+    inputs.property "mod_id", rootProject.mod_id
+    inputs.property "mod_name", rootProject.mod_name
+    inputs.property "mod_license", rootProject.mod_license
+    inputs.property "mod_authors", rootProject.mod_authors
+    inputs.property "mod_description", rootProject.mod_description
+
+    filesMatching("META-INF/mods.toml") {
+        expand(
+                version: rootProject.mod_version,
+                minecraft_version: rootProject.minecraft_version,
+                forge_version: rootProject.forge_version,
+                architectury_api_version: rootProject.architectury_api_version,
+                mod_id: rootProject.mod_id,
+                mod_name: rootProject.mod_name,
+                mod_license: rootProject.mod_license,
+                mod_authors: rootProject.mod_authors,
+                mod_description: rootProject.mod_description
+        )
+    }
+}
+
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = "dev-shadow"
+}
+
+remapJar {
+    inputFile.set(shadowJar.archiveFile)
+    dependsOn shadowJar
+    archiveClassifier = null
+}

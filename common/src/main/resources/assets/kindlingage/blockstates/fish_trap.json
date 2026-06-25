@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north,waterlogged=false,open=false": { "model": "kindlingage:block/fish_trap", "y": 180 },
+    "facing=north,waterlogged=true,open=false": { "model": "kindlingage:block/fish_trap", "y": 180 },
+    "facing=north,waterlogged=false,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 180 },
+    "facing=north,waterlogged=true,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 180 },
+    "facing=south,waterlogged=false,open=false": { "model": "kindlingage:block/fish_trap" },
+    "facing=south,waterlogged=true,open=false": { "model": "kindlingage:block/fish_trap" },
+    "facing=south,waterlogged=false,open=true": { "model": "kindlingage:block/fish_trap_open" },
+    "facing=south,waterlogged=true,open=true": { "model": "kindlingage:block/fish_trap_open" },
+    "facing=west,waterlogged=false,open=false": { "model": "kindlingage:block/fish_trap", "y": 90 },
+    "facing=west,waterlogged=true,open=false": { "model": "kindlingage:block/fish_trap", "y": 90 },
+    "facing=west,waterlogged=false,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 90 },
+    "facing=west,waterlogged=true,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 90 },
+    "facing=east,waterlogged=false,open=false": { "model": "kindlingage:block/fish_trap", "y": 270 },
+    "facing=east,waterlogged=true,open=false": { "model": "kindlingage:block/fish_trap", "y": 270 },
+    "facing=east,waterlogged=false,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 270 },
+    "facing=east,waterlogged=true,open=true": { "model": "kindlingage:block/fish_trap_open", "y": 270 }
+  }
+}

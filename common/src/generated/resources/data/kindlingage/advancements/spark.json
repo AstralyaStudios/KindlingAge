@@ -1,0 +1,43 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_kindling": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:kindling"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.spark.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:kindling"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.spark.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_kindling"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kindlingage:hearth_pit"
+    ]
+  },
+  "sends_telemetry_event": true
+}

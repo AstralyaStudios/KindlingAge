@@ -1,0 +1,51 @@
+{
+  "parent": "kindlingage:gone_fishing",
+  "criteria": {
+    "bait_fish_trap": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "kindlingage:fish_trap"
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "kindlingage:wild_seeds"
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.sleeping_with_the_fishes.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:wild_seeds"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.sleeping_with_the_fishes.title"
+    }
+  },
+  "requirements": [
+    [
+      "bait_fish_trap"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

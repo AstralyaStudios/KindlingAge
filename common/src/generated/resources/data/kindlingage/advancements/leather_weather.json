@@ -1,0 +1,38 @@
+{
+  "parent": "kindlingage:off_the_rack",
+  "criteria": {
+    "has_leather": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.leather_weather.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:leather"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.leather_weather.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_leather"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

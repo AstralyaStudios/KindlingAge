@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "kindlingage:fiber_cord"
+    },
+    "F": {
+      "item": "kindlingage:flint_flake"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  F",
+    " SC",
+    "S  "
+  ],
+  "result": {
+    "item": "kindlingage:hunting_spear"
+  },
+  "show_notification": true
+}

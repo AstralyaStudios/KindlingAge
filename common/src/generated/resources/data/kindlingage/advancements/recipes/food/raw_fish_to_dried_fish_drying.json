@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_fish": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cod"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kindlingage:raw_fish_to_dried_fish_drying"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_fish",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kindlingage:raw_fish_to_dried_fish_drying"
+    ]
+  },
+  "sends_telemetry_event": true
+}

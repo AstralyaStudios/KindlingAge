@@ -1,0 +1,38 @@
+{
+  "parent": "kindlingage:spark",
+  "criteria": {
+    "has_hearth_pit": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:hearth_pit"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.where_theres_smoke.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:hearth_pit"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.where_theres_smoke.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_hearth_pit"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

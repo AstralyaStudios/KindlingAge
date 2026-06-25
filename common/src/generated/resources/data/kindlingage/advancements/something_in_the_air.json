@@ -1,0 +1,51 @@
+{
+  "parent": "kindlingage:off_the_rack",
+  "criteria": {
+    "has_dried_fish": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:dried_fish"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_jerky": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:jerky"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.something_in_the_air.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:dried_fish"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.something_in_the_air.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dried_fish",
+      "has_jerky"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

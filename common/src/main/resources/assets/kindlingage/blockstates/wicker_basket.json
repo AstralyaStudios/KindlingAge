@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "kindlingage:block/wicker_basket", "y": 180 },
+    "facing=south": { "model": "kindlingage:block/wicker_basket" },
+    "facing=west": { "model": "kindlingage:block/wicker_basket", "y": 90 },
+    "facing=east": { "model": "kindlingage:block/wicker_basket", "y": 270 }
+  }
+}

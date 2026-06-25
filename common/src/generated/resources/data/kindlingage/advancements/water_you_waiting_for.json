@@ -1,0 +1,38 @@
+{
+  "parent": "kindlingage:pot_luck",
+  "criteria": {
+    "has_water_reed_scoop": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:water_reed_scoop"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.water_you_waiting_for.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:water_reed_scoop"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.water_you_waiting_for.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_water_reed_scoop"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

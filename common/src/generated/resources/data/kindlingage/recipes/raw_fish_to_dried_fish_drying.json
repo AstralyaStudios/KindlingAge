@@ -1,0 +1,21 @@
+{
+  "type": "kindlingage:drying",
+  "duration": 120,
+  "ingredient": [
+    {
+      "item": "minecraft:cod"
+    },
+    {
+      "item": "minecraft:salmon"
+    },
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "item": "minecraft:pufferfish"
+    }
+  ],
+  "result": {
+    "item": "kindlingage:dried_fish"
+  }
+}

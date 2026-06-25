@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "kindlingage:fiber_cord"
+    },
+    "R": {
+      "item": "minecraft:sugar_cane"
+    }
+  },
+  "pattern": [
+    "R R",
+    " C "
+  ],
+  "result": {
+    "item": "kindlingage:reed_scoop"
+  },
+  "show_notification": true
+}

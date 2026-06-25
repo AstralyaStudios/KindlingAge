@@ -1,0 +1,10 @@
+{
+  "type": "kindlingage:drying",
+  "duration": 2400,
+  "ingredient": {
+    "item": "minecraft:kelp"
+  },
+  "result": {
+    "item": "minecraft:dried_kelp"
+  }
+}

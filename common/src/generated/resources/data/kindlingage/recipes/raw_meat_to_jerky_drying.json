@@ -1,0 +1,24 @@
+{
+  "type": "kindlingage:drying",
+  "duration": 4800,
+  "ingredient": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:porkchop"
+    },
+    {
+      "item": "minecraft:mutton"
+    },
+    {
+      "item": "minecraft:chicken"
+    },
+    {
+      "item": "minecraft:rabbit"
+    }
+  ],
+  "result": {
+    "item": "kindlingage:jerky"
+  }
+}

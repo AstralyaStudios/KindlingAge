@@ -1,0 +1,38 @@
+{
+  "parent": "kindlingage:root",
+  "criteria": {
+    "has_roasted_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kindlingage:roasted_seeds"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kindlingage.seed_you_later.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kindlingage:roasted_seeds"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kindlingage.seed_you_later.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_roasted_seeds"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

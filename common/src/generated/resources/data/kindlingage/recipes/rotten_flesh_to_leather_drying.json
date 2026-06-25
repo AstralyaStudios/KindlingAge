@@ -1,0 +1,10 @@
+{
+  "type": "kindlingage:drying",
+  "duration": 9600,
+  "ingredient": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "result": {
+    "item": "minecraft:leather"
+  }
+}
